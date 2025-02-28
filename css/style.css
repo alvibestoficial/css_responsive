@@ -20,11 +20,11 @@ Creamos los estilos de la página
 
 /** Cabecera */
 header {
-
+    box-shadow: 0 0 10px #006400;
 }
 
 header h1 {
-
+    padding: 15px;
 }
 
 /**
@@ -32,18 +32,30 @@ header h1 {
  Ten en cuenta el requisito para las pantallas menores de 400 píxeles.
  */
 #flexBox {
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-
 .tarjeta {
-
+    width: 200px;
+    height: auto;
+    margin: 10px 5px;
 }
 
 .tarjeta img {
-
+    display: block;
+    margin: auto;
+    width: 100%;
 }
 
 .tarjeta p {
+    text-align: center;
+}
 
+/* Media query para pantallas menores de 400px */
+@media screen and (max-width: 400px) {
+    #flexBox {
+        flex-direction: column;
+    }
 }
